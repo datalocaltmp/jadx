@@ -73,6 +73,8 @@ public enum ActionModel {
 			Shortcut.none()),
 	OPEN_DEVICE(MENU_TOOLBAR, "debugger.process_selector", "debugger.process_selector", "ui/startDebugger",
 			Shortcut.none()),
+	VISUALIZE(MENU_TOOLBAR, "visualizer.load_action", "visualizer.load_action", "ui/visualize",
+			Shortcut.none()),
 
 	FIND_USAGE(CODE_AREA, "popup.find_usage", "popup.find_usage", null,
 			Shortcut.keyboard(KeyEvent.VK_X)),

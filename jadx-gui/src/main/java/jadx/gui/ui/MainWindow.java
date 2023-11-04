@@ -1012,6 +1012,7 @@ public class MainWindow extends JFrame {
 				() -> new QuarkDialog(MainWindow.this).setVisible(true));
 		JadxGuiAction openDeviceAction = new JadxGuiAction(ActionModel.OPEN_DEVICE,
 				() -> new ADBDialog(MainWindow.this).setVisible(true));
+		JadxGuiAction visualizeAction = new JadxGuiAction(ActionModel.VISUALIZE, this::openFileDialog);
 
 		JMenu file = new JadxMenu(NLS.str("menu.file"), shortcutsController);
 		file.setMnemonic(KeyEvent.VK_F);
@@ -1065,6 +1066,7 @@ public class MainWindow extends JFrame {
 		tools.add(deobfMenuItem);
 		tools.add(quarkAction);
 		tools.add(openDeviceAction);
+		tools.add(visualizeAction);
 
 		JMenu help = new JadxMenu(NLS.str("menu.help"), shortcutsController);
 		help.setMnemonic(KeyEvent.VK_H);
@@ -1122,6 +1124,7 @@ public class MainWindow extends JFrame {
 		toolbar.add(deobfToggleBtn);
 		toolbar.add(quarkAction);
 		toolbar.add(openDeviceAction);
+		toolbar.add(visualizeAction);
 		toolbar.addSeparator();
 		toolbar.add(showLogAction);
 		toolbar.addSeparator();
